@@ -1,1 +1,44 @@
 @import './vars';
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+figure{
+    margin-bottom: 0;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.button{
+    padding: 10px 23px;
+    color: $text-white;
+    cursor: pointer;
+    border-radius: 999px;
+    border: 0px;
+    width: fit-content;
+    margin: 0 32px;
+    transition: all ease-in-out 200ms;
+
+    &:hover{
+        background-color:  $bg-red-hover;
+
+    }
+}
+
+.bg-red{
+    background-color: $bg-red;
+}
+.bg-blue{
+    background-color: $bg-blue;
+}
