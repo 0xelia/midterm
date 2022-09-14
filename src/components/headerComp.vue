@@ -2,14 +2,14 @@
     <header class="d-flex align-items-center">
         <div class="container">
             
-            <div class= "wrapper row row-cols-4 align-items-center">
-                <figure class="logo">
+            <div class= "wrapper row row-cols-4 align-items-center justify-content-center">
+                <figure class="logo me-auto">
                     <img src="../assets/images/logo.png" alt="">
                 </figure>
                 <NavItem :menu="mainNav"/>
 
 
-                <button class="button bg-blue">
+                <button class="button bg-blue btn-padding-small">
                     Schedule a Workout
                 </button>
 
@@ -85,14 +85,14 @@ import NavItem from "./navItem.vue";
                     text: '',
                     alert: false,
                     active: false,
-                    icon: 'fa-solid fa-magnifying-glass'
+                    icon: 'fa-solid fa-cart-shopping'
                     
                 },
                 {
                     text: '',
                     alert: false,
                     active: false,
-                    icon: 'fa-solid fa-cart-shopping'
+                    icon: 'fa-solid fa-magnifying-glass'
                     
                 },
             ]
@@ -110,6 +110,10 @@ import NavItem from "./navItem.vue";
         padding: 25px 0;
         .wrapper {
             height: 100%;
+
+            button{
+                margin: 0 30px;
+            }
         }
     }
 </style>

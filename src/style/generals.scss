@@ -21,13 +21,11 @@ a {
 }
 
 .button{
-    padding: 10px 23px;
     color: $text-white;
     cursor: pointer;
     border-radius: 999px;
-    border: 0px;
+    border: solid currentColor 0px;
     width: fit-content;
-    margin: 0 32px;
     transition: all ease-in-out 200ms;
 
     &:hover{
@@ -35,6 +33,18 @@ a {
 
     }
 }
+
+.btn-padding-small{
+    padding: 10px 23px;
+}
+.btn-padding-big{
+    padding: 15px 28px;
+}
+
+.custom-radius{
+    border-radius: 3px 3px 999px 3px;
+}
+
 
 .bg-red{
     background-color: $bg-red;
