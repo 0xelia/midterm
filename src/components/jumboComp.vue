@@ -1,41 +1,26 @@
 <template>
-    <div class="jumbo">
-        <div class="container">
-    
-            <div class="row">
-                <div class="col-10 d-flex flex-column justify-content-space-between content">
-                    <h4>
-                        Certified fitness professional
-                    </h4>
-                    <h2>
-                        Take control of your health
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dignissimos animi.
-                    </p>
-                    <div class="button_wrapper" >
-                        <button class="button bg-blue youtube_btn btn-padding-big">
-                            <font-awesome-icon icon="fa-brands fa-youtube" />
-                            Visiti my YouTube channel
-                        </button >
-                        <button class="button  btn-padding-big cta">
-                            Buy Avada today
-                            <font-awesome-icon icon="fa-solid fa-arrow-right" />
-                        </button>
-                    </div>
-                </div>
-                <div class="col-2 d-flex justify-content-center align-items-center">
-                    <font-awesome-icon class="icon" icon="fa-solid fa-play" />
-                </div>
-            </div>
-        </div>
-    </div>
+    <TitleComp :content="content"/>
 </template>
 
 <script>
+import TitleComp from './titleComp.vue';
     export default {
-        name: 'jumboComp'
-    }
+    name: "jumboComp",
+    data() {
+        return {
+            content: {
+                subtitle: "Certified fitness professional",
+                title: "Take control of your health",
+                p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dignissimos animi.",
+                pic: require('../assets/images/slider82x-scaled.jpg'),
+                video: true,
+                mail: false
+            }
+        };
+    },
+    components: { TitleComp }
+}
+
 </script>
 
 <style lang="scss" scoped>

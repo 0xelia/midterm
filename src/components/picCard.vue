@@ -31,6 +31,7 @@
 
     .cards{
         .col{
+            padding: 0 20px !important;
             &.card_center{
                 display: flex;
                 justify-content: center;
