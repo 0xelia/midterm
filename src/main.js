@@ -18,10 +18,10 @@ Vue.use(IconsPlugin)
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faChevronDown, faMagnifyingGlass, faCartShopping, faArrowRight, faPlay} from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faChevronRight, faMagnifyingGlass, faCartShopping, faArrowRight, faPlay} from '@fortawesome/free-solid-svg-icons'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faChevronDown, faMagnifyingGlass, faCartShopping, faYoutube, faArrowRight, faPlay)
+library.add(faChevronDown, faChevronRight, faMagnifyingGlass, faCartShopping, faYoutube, faArrowRight, faPlay)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 new Vue({

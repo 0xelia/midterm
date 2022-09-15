@@ -29,18 +29,21 @@ import PicCard from './picCard.vue';
                 {
                     title: 'Crossfit Workout',
                     subtitle: 'Push Your limits',
-                    bgPic: require('../assets/images/service6-2x.jpg')
+                    bgPic: require('../assets/images/service6-2x.jpg'),
+                    regular: true
                 },
                 {
                     title: 'Crossfit Workout',
                     subtitle: 'Look good, feel good',
-                    bgPic: require('../assets/images/box1-2x.jpg')
+                    bgPic: require('../assets/images/box1-2x.jpg'),
+                    regular: true
                 
                 },
                 {
                     title: 'Crossfit Workout',
                     subtitle: 'Find a partner',
-                    bgPic: require('../assets/images/box3-2x.jpg')
+                    bgPic: require('../assets/images/box3-2x.jpg'),
+                    regular: true
                 },
             ]
         };
@@ -60,7 +63,7 @@ import PicCard from './picCard.vue';
             position: relative;
 
             .quote{
-                padding-top: 450px;
+                padding-top: 100px;
                 color: $text-white;
                 font-size: 36px;
 

@@ -27,7 +27,6 @@
                 <div class="col-2 d-flex justify-content-center align-items-center">
                     <font-awesome-icon class="icon" icon="fa-solid fa-play" />
                 </div>
-                    <span class="gradient"></span>
             </div>
         </div>
     </div>
@@ -91,12 +90,5 @@
             color: $text-red
         }
     }
-    // .gradient{
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(219,219,219,0) 100%);
-    //     z-index: 0;
-    // }
 }
 </style>

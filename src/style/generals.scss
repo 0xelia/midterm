@@ -51,7 +51,7 @@ a {
 }
 
 .custom-radius{
-    border-radius: 3px 3px 70px 3px;
+    border-radius: 3px 3px 30px 3px;
 }
 
 
@@ -60,4 +60,29 @@ a {
 }
 .bg-blue{
     background-color: $bg-blue;
+}
+
+.icon_play{
+    padding: 40px;
+    background-color: $text-white;
+    color: $text-blue;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+        color: $text-red
+    }
+}
+
+.col{
+    padding: 0;
+}
+
+p{
+    margin-bottom: 0;
 }
