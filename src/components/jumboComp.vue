@@ -46,7 +46,7 @@
     background-image: url('../assets/images/slider82x-scaled.jpg');
     background-position: top;
     background-size: cover;
-    min-height: 500px;
+    min-height: 600px;
     position: relative;
 
     .content{

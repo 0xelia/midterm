@@ -1,4 +1,9 @@
 @import './vars';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'Roboto Condensed';
+}
 
 ul, ol {
     list-style: none;
@@ -42,7 +47,7 @@ a {
 }
 
 .custom-radius{
-    border-radius: 3px 3px 999px 3px;
+    border-radius: 3px 3px 70px 3px;
 }
 
 
