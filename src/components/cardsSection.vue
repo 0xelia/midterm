@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="container">
-            <!-- <PicCard :cards="cards"/> -->
+
 
             <div class="quote text-center">
                 <p>
@@ -18,11 +18,11 @@
 </template> 
 
 <script>
-// import PicCard from './picCard.vue';
+
 
     export default {
     name: "cardsSection",
-    // components: { PicCard },
+
     data() {
         return {
             cards: [

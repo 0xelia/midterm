@@ -8,6 +8,7 @@
         <ArticlesSection/>
         <DisplaySection/>
         <PartnersSection/>
+        <LastVideo/>
     </div>
 </template>
 
@@ -20,9 +21,20 @@ import PlansSection from './plansSection.vue';
 import ArticlesSection from './articlesSection.vue';
 import DisplaySection from './displaySection.vue';
 import PartnersSection from './partnersSection.vue';
+import LastVideo from './lastVideo.vue';
     export default {
     name: "mainComp",
-    components: { JumboComp, CardsSection, VideoSection, MailSection, PlansSection, ArticlesSection, DisplaySection, PartnersSection }
+    components: { 
+        JumboComp, 
+        CardsSection, 
+        VideoSection, 
+        MailSection, 
+        PlansSection, 
+        ArticlesSection, 
+        DisplaySection, 
+        PartnersSection, 
+        LastVideo
+    }
 }
 </script>
 
