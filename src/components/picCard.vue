@@ -1,11 +1,12 @@
 <template>  
-        <ul class="cards row row-cols-3 g-3 justify-content-center">
-            <div :class="['col', !card.regular ? 'card_center' : '']" v-for="(card, i) in cards" :key="i">
-                <li :class="['card_item  custom-radius', card.regular ? 'regular floating' : 'horizontal']">
+        <ul class="cards">
+            <div  v-for="(card, i) in cards" :key="i">
+                <li :class="['card_item horizontal', card.video ?  'custom-radius' : '']">
                     <img :src="`${card.bgPic}`" alt="">
-                    <font-awesome-icon v-if="!card.regular" icon="fa-solid fa-play" class="icon_play"/>
+                    <font-awesome-icon v-if="card.video" icon="fa-solid fa-play" class="icon_play"/>
+                    <span v-if="!card.video" class="hover_gradient" ></span>
                 </li>
-                <div :class="['card_des', card.regular ? 'card_des_1' : 'card_des_2']">
+                <div :class="['card_des', card.video ?  'card_des_1' : 'card_des_2']">
                     <h4>
                         {{card.title}}
                     </h4>
@@ -28,20 +29,12 @@
 
 <style lang="scss" scoped>
     @import '../style/generals.scss';
-
+    @import '../style/mixins.scss';
     .cards{
-        .col{
-            padding: 0 20px !important;
-            &.card_center{
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-
-                &.card_center:nth-child(2){
-                    padding: 0 20px !important;
-                }
-            }
+        @include flex-cards;
             .card_item{
+                height: 100%;
+                flex-basis: calc((100% / 3) - 2rem);
                 background: #fff;
                 background-position: center;
                 background-size: cover;
@@ -50,28 +43,27 @@
                 transition: 500ms ease-in-out;
                 cursor: pointer;
 
-                &.floating{
-                        margin-top: -100px !important;
-                    }
-
-                &.regular{
-                    aspect-ratio: 1;
-                    box-shadow: 0px 6px 20px 0px rgb(0 0 0 / 40%);
-
-                    &:hover{
-                    transform: scale(1.04);
-                    box-shadow: 0px 10px 20px 10px rgb(0 0 0 / 40%);
-
-                    .card_des{
-                        transform: scale(0.96);
-                    }
-                }
-
-                }
+                
 
                 &.horizontal {
                     height: 200px;
                     aspect-ratio: 16/9;
+
+                    .hover_gradient{
+                        position: absolute;
+                        opacity: 0;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background: linear-gradient(0deg, rgba(65,84,255,0.7) 20%, rgba(219,219,219,0) 100%);
+                        z-index: 999;
+                        transition: 300ms ease-in-out;
+
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
 
 
                     .icon_play{
@@ -85,27 +77,22 @@
 
 
             }
-            .card_des_1{
-
-                
-                padding-left: 32px;
-                transform: translateY(-80px);
-                
-                transition: 500ms ease-in-out;
+            .card_des_2{
+                text-align: left;
+                padding: 1rem 0 0 1rem;
                 
 
                 h4{
-                    font-size: 24px;
-                    color: whitesmoke;
-                    font-weight: 700;
+                    font-size: 20px;
+                    
                 }
                 h6{
-                    font-size: 20px;
-                    color: $bg-alert;
+                    font-size: 16px;
+                    font-weight: 200;
                 }
             }
 
-            .card_des_2{
+            .card_des_1{
                 text-align: center;
                 padding-top: 20px;
 
@@ -119,5 +106,4 @@
                 }
             }
         }
-    }
 </style>

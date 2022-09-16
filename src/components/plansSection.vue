@@ -5,6 +5,7 @@
             <ul class="card_list">
                 <GraphicCard v-for="(card, i) in cards" :key="i" :content="card"/>
             </ul>
+            
         </div>
     </div>
 </template>
