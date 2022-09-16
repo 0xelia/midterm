@@ -6,6 +6,8 @@
         <MailSection/>
         <PlansSection/>
         <ArticlesSection/>
+        <DisplaySection/>
+        <PartnersSection/>
     </div>
 </template>
 
@@ -16,9 +18,11 @@ import VideoSection from './videoSection.vue';
 import MailSection from './mailSection.vue';
 import PlansSection from './plansSection.vue';
 import ArticlesSection from './articlesSection.vue';
+import DisplaySection from './displaySection.vue';
+import PartnersSection from './partnersSection.vue';
     export default {
     name: "mainComp",
-    components: { JumboComp, CardsSection, VideoSection, MailSection, PlansSection, ArticlesSection }
+    components: { JumboComp, CardsSection, VideoSection, MailSection, PlansSection, ArticlesSection, DisplaySection, PartnersSection }
 }
 </script>
 
