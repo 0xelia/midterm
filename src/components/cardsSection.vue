@@ -2,6 +2,9 @@
     <section>
         <div class="container">
 
+            <ul class="cards">
+                <FloatingCards v-for="(card, i) in cards" :key="i" :content="card"/>
+            </ul>
 
             <div class="quote text-center">
                 <p>
@@ -18,41 +21,42 @@
 </template> 
 
 <script>
+import FloatingCards from './floatingCards.vue';
 
 
     export default {
     name: "cardsSection",
-
     data() {
         return {
             cards: [
                 {
-                    title: 'Crossfit Workout',
-                    subtitle: 'Push Your limits',
-                    bgPic: require('../assets/images/service6-2x.jpg'),
+                    title: "Crossfit Workout",
+                    subtitle: "Push Your limits",
+                    bgPic: require("../assets/images/service6-2x.jpg"),
                     regular: true
                 },
                 {
-                    title: 'Crossfit Workout',
-                    subtitle: 'Look good, feel good',
-                    bgPic: require('../assets/images/box1-2x.jpg'),
+                    title: "Crossfit Workout",
+                    subtitle: "Look good, feel good",
+                    bgPic: require("../assets/images/box1-2x.jpg"),
                     regular: true
-                
                 },
                 {
-                    title: 'Crossfit Workout',
-                    subtitle: 'Find a partner',
-                    bgPic: require('../assets/images/box3-2x.jpg'),
+                    title: "Crossfit Workout",
+                    subtitle: "Find a partner",
+                    bgPic: require("../assets/images/box3-2x.jpg"),
                     regular: true
                 },
             ]
         };
     },
+    components: { FloatingCards }
 }
 </script>
 
 <style lang="scss" scoped>
     @import '../style/generals.scss';
+    @import '../style/mixins.scss' ;
 
     section{
         min-height: 700px;
@@ -61,6 +65,11 @@
         
         .container{
             position: relative;
+
+            .cards{
+                @include flex-cards;
+                gap: 2rem !important;
+            }
 
             .quote{
                 padding-top: 100px;
