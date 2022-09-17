@@ -1,8 +1,7 @@
 <template>
     <div class="col">
         
-        <li class="card_item custom-radius" :style="`backgroundImage: url(${content.bgPic})`" >
-        </li>
+        <li class="card_item custom-radius" :style="`backgroundImage: url(${content.bgPic})`" ></li>
 
         <div class="card_des">
 

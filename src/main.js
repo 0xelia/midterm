@@ -20,9 +20,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faChevronDown, faChevronRight, faMagnifyingGlass, faCartShopping, faArrowRight, faPlay, faDumbbell, faChild} from '@fortawesome/free-solid-svg-icons'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
-import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faYoutube, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faChevronDown, faChevronRight, faMagnifyingGlass, faCartShopping, faYoutube, faArrowRight, faPlay, faClock, faDumbbell, faChild)
+library.add(faChevronDown, faChevronRight, faMagnifyingGlass, faCartShopping, faYoutube, faArrowRight, faPlay, faClock, faDumbbell, faChild, faTwitter, faInstagram, faLinkedin)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 new Vue({
